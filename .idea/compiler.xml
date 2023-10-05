@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
+        </processorPath>
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-tmp.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-generated-sources-annotationProcessor-java.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-test-results.test" />
+        <module name="Shared_Expenses_Tracker.util.test" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-tmp.test" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-generated-sources-annotationProcessor-java.test" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-reports-tests.test" />
+        <module name="Shared_Expenses_Tracker.util.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-test-results.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-classes-java.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task.test" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-generated-sources-headers-java.test" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-classes-java.test" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-generated-sources-headers-java.main" />
+        <module name="Shared_Expenses_Tracker.Shared_Expenses_Tracker-task-build-reports-tests.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>

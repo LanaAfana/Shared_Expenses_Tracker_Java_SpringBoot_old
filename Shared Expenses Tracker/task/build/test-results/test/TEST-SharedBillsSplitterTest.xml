@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SharedBillsSplitterTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-05T08:46:55" hostname="192.168.0.41" time="0.282">
+  <properties/>
+  <testcase name="start" classname="SharedBillsSplitterTest" time="0.282"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+> exit
+?[1;31m
+Start test 2?[0m
+> someRandomText
+Unknown command. Print help to show commands list
+> exit
+?[1;31m
+Start test 3?[0m
+> repay Ann
+Illegal command arguments
+> exit
+?[1;31m
+Start test 4?[0m
+> help
+balance
+borrow
+exit
+help
+repay
+> exit
+?[1;31m
+Start test 5?[0m
+> 2020.09.30 borrow Ann Bob 20
+> 2020.10.01 repay Ann Bob 10
+> 2020.10.10 borrow Bob Ann 7
+> 2020.10.15 repay Ann Bob 8
+> repay Bob Ann 5
+> 2020.09.25 balance
+No repayments
+> 2020.10.30 balance open
+Ann owes Bob 20
+> 2020.10.20 balance close
+Bob owes Ann 5
+> balance close
+No repayments
+> exit
+?[1;31m
+Start test 6?[0m
+> borrow Ann Bob 25
+> repay Ann Bob 15
+> repay Bob Chuck 7
+> borrow Ann Bob 4
+> repay Bob Diana 5
+> borrow Elon Diana 12
+> repay Chuck Diana 14
+> repay Chuck Diana 12
+> balance close
+Ann owes Bob 14
+Chuck owes Bob 7
+Diana owes Bob 5
+Diana owes Chuck 26
+Elon owes Diana 12
+> exit
+?[1;31m
+Start test 7?[0m
+> borrow Annabelle Elon 28
+> repay Elon Annabelle 14
+> repay Finny Diana 15
+> repay Annabelle Finny 196
+> repay Annabelle Carlos 138
+> borrow Carlos Annabelle 81
+> borrow Annabelle Elon 181
+> borrow Finny Diana 23
+> borrow Elon Diana 151
+> repay Finny Billibob 59
+> borrow Finny Annabelle 142
+> borrow Diana Finny 127
+> repay Billibob Annabelle 46
+> borrow Finny Billibob 9
+> borrow Elon Carlos 173
+> repay Annabelle Carlos 69
+> repay Diana Billibob 182
+> repay Billibob Annabelle 33
+> repay Diana Billibob 148
+> repay Diana Annabelle 152
+> repay Carlos Diana 24
+> borrow Annabelle Carlos 38
+> borrow Annabelle Diana 133
+> borrow Diana Finny 65
+> repay Carlos Annabelle 10
+> borrow Billibob Carlos 87
+> repay Billibob Carlos 150
+> repay Carlos Elon 58
+> repay Annabelle Elon 190
+> repay Billibob Elon 150
+> borrow Carlos Annabelle 110
+> repay Elon Billibob 113
+> repay Finny Diana 179
+> borrow Finny Annabelle 74
+> repay Finny Annabelle 6
+> repay Finny Annabelle 178
+> repay Annabelle Carlos 121
+> repay Diana Elon 0
+> borrow Billibob Annabelle 122
+> repay Finny Diana 42
+> repay Elon Annabelle 10
+> repay Elon Finny 146
+> borrow Carlos Elon 196
+> repay Finny Diana 78
+> repay Carlos Elon 131
+> borrow Billibob Annabelle 45
+> borrow Diana Elon 74
+> borrow Diana Finny 183
+> repay Carlos Billibob 84
+> repay Carlos Annabelle 116
+> repay Diana Annabelle 186
+> borrow Billibob Carlos 134
+> borrow Elon Finny 103
+> borrow Annabelle Carlos 147
+> borrow Diana Carlos 186
+> repay Billibob Annabelle 169
+> borrow Elon Diana 35
+> repay Annabelle Elon 85
+> repay Carlos Diana 120
+> repay Billibob Finny 146
+> repay Annabelle Billibob 109
+> repay Annabelle Elon 94
+> borrow Billibob Carlos 67
+> borrow Billibob Finny 10
+> borrow Carlos Finny 76
+> borrow Billibob Diana 72
+> repay Billibob Carlos 92
+> borrow Carlos Finny 96
+> borrow Elon Carlos 130
+> repay Annabelle Diana 117
+> borrow Carlos Billibob 84
+> borrow Elon Diana 128
+> borrow Diana Billibob 133
+> borrow Annabelle Elon 158
+> borrow Elon Diana 77
+> borrow Annabelle Elon 42
+> borrow Annabelle Diana 144
+> borrow Carlos Diana 57
+> repay Finny Elon 48
+> repay Billibob Elon 84
+> repay Elon Diana 188
+> borrow Carlos Elon 173
+> borrow Diana Billibob 57
+> repay Annabelle Finny 26
+> repay Billibob Carlos 164
+> borrow Billibob Carlos 193
+> repay Annabelle Carlos 6
+> repay Elon Annabelle 44
+> repay Diana Elon 152
+> repay Annabelle Carlos 66
+> balance close
+Annabelle owes Elon 108
+Finny owes Annabelle 254
+Carlos owes Annabelle 280
+Billibob owes Annabelle 28
+Billibob owes Carlos 75
+Elon owes Billibob 121
+Diana owes Carlos 273
+Carlos owes Finny 172
+Billibob owes Diana 212
+Annabelle owes Diana 498
+Elon owes Diana 281
+Elon owes Carlos 123
+Elon owes Finny 5
+Diana owes Finny 666
+Finny owes Billibob 86
+> exit
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
