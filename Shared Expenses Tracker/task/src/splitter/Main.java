@@ -1,10 +1,13 @@
 package splitter;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
     static List<Transaction> transactions = new ArrayList();
+    static List<Group> groups = new ArrayList();
     static List<Transaction> result = new ArrayList();
 
     public static void main(String[] args) {
@@ -16,14 +19,29 @@ public class Main {
                     System.out.println("balance\n" +
                             "borrow\n" +
                             "exit\n" +
+                            "group\n" +
                             "help\n" +
+                            "purchase\n" +
                             "repay");
                     continue;
                 }
                 if (cmd.equals("exit")) {
                     break;
                 }
-                String[] cmdList = cmd.trim().split(" ");
+                String[] cmdList = cmd.trim().split("\\s+");
+                if (cmd.contains("group ")) {
+                    if (cmd.contains("create")) {
+                        createGroup(cmd.trim());
+                        continue;
+                    } else if (cmd.contains("show")) {
+                        showGroup(cmd.trim());
+                        continue;
+                    }
+                }
+                if (cmd.contains("purchase")) {
+                    doPurchase(cmdList);
+                    continue;
+                }
                 if (cmd.contains("balance")) {
                     doBalance(cmdList);
                     continue;
@@ -41,6 +59,89 @@ public class Main {
         }
     }
 
+    private static void doPurchase(String[] cmdList) {
+        if (Transaction.isValidOperation(cmdList, "purchase")) {
+            String groupName = cmdList[cmdList.length - 1]
+                    .substring(1, cmdList[cmdList.length - 1].length() - 1);
+            if (Group.isAGroup(groupName)) {
+                int shift = cmdList.length == 5 ? 0 : 1;
+                LocalDate date = cmdList[0].matches("purchase") ?
+                        LocalDate.now() :
+                        LocalDate.parse(cmdList[0].replace('.', '-'));
+                String acc_credit = cmdList[shift + 1].trim();
+                Group group = groups.stream()
+                        .filter(x -> x.getName().equals(groupName))
+                        .findFirst()
+                        .get();
+
+                Double sum = Double.parseDouble(cmdList[shift + 3].trim())
+                        / group.getParticipants().size();
+                System.out.println(sum);
+                for (int i = 0; i < group.getParticipants().size(); i++) {
+                    String participant = group.getParticipants().get(i);
+                    if (participant.equals(acc_credit)) {
+                        continue;
+                    }
+                    if (i == group.getParticipants().size() - 1) {
+                        sum = Double.parseDouble(cmdList[shift + 3].trim()) - new BigDecimal(sum)
+                                .setScale(2, RoundingMode.HALF_UP)
+                                .doubleValue() * (group.getParticipants().size() - 1);
+                        System.out.println(sum);
+                    } else {
+                        sum = new BigDecimal(sum)
+                                .setScale(2, RoundingMode.HALF_UP)
+                                .doubleValue();
+                        System.out.println(sum);
+                    }
+                    transactions.add(new Transaction(date,
+                            participant,
+                            acc_credit,
+                            sum));
+                }
+            } else {
+                System.out.println("Unknown group");
+            }
+        } else {
+            printCmdError();
+        }
+    }
+
+    private static void showGroup(String cmdStr) {
+        if (Group.isValidOperation(cmdStr, "show")) {
+            String name = cmdStr.split("\\s+")[2];
+            if (groups.stream()
+                    .filter(x -> x.getName().equals(name))
+                    .findFirst().isPresent()) {
+                groups.stream()
+                        .filter(x -> x.getName().equals(name))
+                        .findFirst()
+                        .get()
+                        .getParticipants()
+                        .stream().sorted()
+                        .forEach(System.out::println);
+            } else {
+                System.out.println("Unknown group");
+            }
+        } else {
+            printCmdError();
+        }
+    }
+
+    private static void createGroup(String cmdStr) {
+        if (Group.isValidOperation(cmdStr, "create")) {
+            String[] cmdList = cmdStr.split("\\(");
+            String name = cmdList[0].trim().split("\\s+")[2].trim();
+            List<String> listParticipants = Arrays.stream(cmdList[1]
+                    .replace(")", "")
+                    .split(",\\s*"))
+                    .sorted()
+                    .toList();
+            groups.add(new Group(name, listParticipants));
+        } else {
+            printCmdError();
+        }
+    }
+
     private static void doTransaction(String[] cmdList, String cmd) {
         if (Transaction.isValidOperation(cmdList, "borrow")
         || Transaction.isValidOperation(cmdList, "repay")) {
@@ -49,12 +150,18 @@ public class Main {
             LocalDate date = cmdList[0].matches("borrow|repay") ?
                     LocalDate.now() :
                     LocalDate.parse(cmdList[0].replace('.', '-'));
-            int mult = cmd.equals("borrow") ? 1 : -1;
+            double mult = cmd.equals("borrow") ? 1.00 : -1.00;
+            Double sum = Double.parseDouble(cmdList[shift + 3]);
+            sum = cmd.equals("borrow")
+                    ? sum
+                    : new BigDecimal(-1.00 * sum)
+                    .setScale(2, RoundingMode.HALF_UP)
+                    .doubleValue();
 
             transactions.add(new Transaction(date,
                     cmdList[shift + 1],
                     cmdList[shift + 2],
-                    Integer.parseInt(cmdList[shift + 3]) * mult));
+                    sum));
         } else {
             printCmdError();
         }
@@ -112,21 +219,25 @@ public class Main {
     private static void outputBalance() {
         boolean hasRepayments = false;
         List<Transaction> resList = result.stream()
+                .sorted(Comparator.comparing(x -> x.getAcc_credit()))
                 .sorted(Comparator.comparing(x -> x.getAcc_debit()))
                 .toList();
         for (Transaction rec : resList) {
-            if (rec.getSum() > 0) {
+            Double sum = new BigDecimal(rec.getSum())
+                    .setScale(2, RoundingMode.HALF_UP)
+                    .doubleValue();
+            if (sum > 0.00) {
                 hasRepayments = true;
-                System.out.printf("%s owes %s %d%n",
+                System.out.printf("%s owes %s %.2f%n",
                         rec.getAcc_debit(),
                         rec.getAcc_credit(),
-                        rec.getSum());
-            } else if (rec.getSum() < 0){
+                        sum);
+            } else if (sum < 0.00){
                 hasRepayments = true;
-                System.out.printf("%s owes %s %d%n",
+                System.out.printf("%s owes %s %.2f%n",
                         rec.getAcc_credit(),
                         rec.getAcc_debit(),
-                        -1 * rec.getSum());
+                        -1 * sum);
             }
         }
         if (!hasRepayments)

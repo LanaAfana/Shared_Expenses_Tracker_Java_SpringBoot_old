@@ -1,38 +1,40 @@
 [1;31m
 Start test 1[0m
-> exit
-[1;31m
-Start test 2[0m
 > someRandomText
 2Unknown command. Print help to show commands list
 > exit
 [1;31m
-Start test 3[0m
+Start test 2[0m
 > repay Ann
 Illegal command arguments
 > exit
 [1;31m
-Start test 4[0m
+Start test 3[0m
 > help
 balance
 borrow
 exit
+group
 help
+	purchase
 repay
 > exit
 [1;31m
+Start test 4[0m
+> exit
+[1;31m
 Start test 5[0m
-> 2020.09.30 borrow Ann Bob 20
-> 2020.10.01 repay Ann Bob 10
-> 2020.10.10 borrow Bob Ann 7
-> 2020.10.15 repay Ann Bob 8
-> repay Bob Ann 5
+"> 2020.09.30 borrow Ann Bob 20.10
+!> 2020.10.01 repay Ann Bob 10.22
+!> 2020.10.10 borrow Bob Ann 7.35
+ > 2020.10.15 repay Ann Bob 8.99
+> repay Bob Ann 6.46
 > 2020.09.25 balance
 No repayments
 > 2020.10.30 balance open
-Ann owes Bob 20
+Ann owes Bob 20.10
 > 2020.10.20 balance close
-Bob owes Ann 5
+Bob owes Ann 6.46
 > balance close
 No repayments
 > exit
@@ -47,118 +49,173 @@
 > repay Chuck Diana 14
 > repay Chuck Diana 12
 > balance close
-Ann owes Bob 14
-Chuck owes Bob 7
-Diana owes Bob 5
-Diana owes Chuck 26
-Elon owes Diana 12
+Ann owes Bob 14.00
+Chuck owes Bob 7.00
+Diana owes Bob 5.00
+Diana owes Chuck 26.00
+Elon owes Diana 12.00
 > exit
 [1;31m
 Start test 7[0m
-> borrow Annabelle Elon 28
-> repay Elon Annabelle 14
-> repay Finny Diana 15
-> repay Annabelle Finny 196
-> repay Annabelle Carlos 138
-> borrow Carlos Annabelle 81
-> borrow Annabelle Elon 181
-> borrow Finny Diana 23
-> borrow Elon Diana 151
-> repay Finny Billibob 59
-> borrow Finny Annabelle 142
-> borrow Diana Finny 127
-> repay Billibob Annabelle 46
-> borrow Finny Billibob 9
-> borrow Elon Carlos 173
-> repay Annabelle Carlos 69
-> repay Diana Billibob 182
-> repay Billibob Annabelle 33
-> repay Diana Billibob 148
-> repay Diana Annabelle 152
-> repay Carlos Diana 24
-> borrow Annabelle Carlos 38
-> borrow Annabelle Diana 133
-> borrow Diana Finny 65
-> repay Carlos Annabelle 10
-> borrow Billibob Carlos 87
-> repay Billibob Carlos 150
-> repay Carlos Elon 58
-> repay Annabelle Elon 190
-> repay Billibob Elon 150
-> borrow Carlos Annabelle 110
-> repay Elon Billibob 113
-> repay Finny Diana 179
-> borrow Finny Annabelle 74
-> repay Finny Annabelle 6
-> repay Finny Annabelle 178
-> repay Annabelle Carlos 121
-> repay Diana Elon 0
- > borrow Billibob Annabelle 122
-> repay Finny Diana 42
-> repay Elon Annabelle 10
-> repay Elon Finny 146
-> borrow Carlos Elon 196
-> repay Finny Diana 78
-> repay Carlos Elon 131
-> borrow Billibob Annabelle 45
-> borrow Diana Elon 74
-> borrow Diana Finny 183
-> repay Carlos Billibob 84
-> repay Carlos Annabelle 116
-> repay Diana Annabelle 186
-> borrow Billibob Carlos 134
-> borrow Elon Finny 103
-> borrow Annabelle Carlos 147
-> borrow Diana Carlos 186
-> repay Billibob Annabelle 169
-> borrow Elon Diana 35
-> repay Annabelle Elon 85
-> repay Carlos Diana 120
-> repay Billibob Finny 146
-> repay Annabelle Billibob 109
-> repay Annabelle Elon 94
-> borrow Billibob Carlos 67
-> borrow Billibob Finny 10
-> borrow Carlos Finny 76
-> borrow Billibob Diana 72
-> repay Billibob Carlos 92
-> borrow Carlos Finny 96
-> borrow Elon Carlos 130
-> repay Annabelle Diana 117
-> borrow Carlos Billibob 84
-> borrow Elon Diana 128
-> borrow Diana Billibob 133
-> borrow Annabelle Elon 158
-> borrow Elon Diana 77
-> borrow Annabelle Elon 42
-> borrow Annabelle Diana 144
-> borrow Carlos Diana 57
-> repay Finny Elon 48
-> repay Billibob Elon 84
-> repay Elon Diana 188
-> borrow Carlos Elon 173
-> borrow Diana Billibob 57
-> repay Annabelle Finny 26
-> repay Billibob Carlos 164
-> borrow Billibob Carlos 193
-> repay Annabelle Carlos 6
-> repay Elon Annabelle 44
-> repay Diana Elon 152
-> repay Annabelle Carlos 66
+> repay Elon Annabelle 92.98
+> repay Carlos Finny 196.41
+> borrow Diana Elon 164.43
+> repay Annabelle Finny 162.71
+ > borrow Finny Annabelle 178.23
+> repay Elon Carlos 61.19
+ > borrow Annabelle Diana 198.61
+> repay Billibob Finny 184.63
+> borrow Finny Diana 96.0
+> repay Diana Carlos 9.0
+> borrow Diana Annabelle 18.45
+ > borrow Annabelle Carlos 87.43
+> repay Elon Carlos 5.21
+> repay Carlos Billibob 37.20
+> repay Carlos Billibob 38.44
+> borrow Billibob Finny 98.78
+> repay Annabelle Diana 58.0
+> borrow Diana Annabelle 5.84
+> repay Diana Annabelle 102.77
+ > borrow Annabelle Carlos 15.58
+> repay Annabelle Finny 190.65
+> repay Carlos Elon 37.15
+> repay Billibob Elon 122.94
+> repay Diana Billibob 174.6
+> repay Annabelle Finny 36.69
+> borrow Carlos Diana 158.34
+> borrow Diana Finny 196.89
+> borrow Annabelle Carlos 3.87
+> borrow Carlos Diana 148.15
+ > repay Annabelle Carlos 105.86
+> repay Elon Billibob 56.32
+> repay Diana Carlos 81.20
+> borrow Finny Diana 192.40
+> repay Carlos Billibob 81.93
+> repay Diana Finny 59.61
+> borrow Annabelle Finny 71.41
+ > borrow Diana Annabelle 179.34
+> borrow Elon Finny 52.82
+> repay Billibob Elon 87.97
+> repay Elon Annabelle 175.25
+> repay Diana Billibob 177.24
+> repay Elon Finny 88.94
+!> repay Annabelle Billibob 138.6
+> borrow Carlos Elon 10.75
+!> repay Billibob Annabelle 92.47
+> borrow Carlos Elon 30.73
+> repay Diana Elon 55.95
+> repay Billibob Elon 88.95
+> borrow Billibob Diana 22.78
+> repay Diana Finny 26.60
+> repay Annabelle Elon 148.26
+> repay Finny Elon 3.37
+> repay Annabelle Finny 30.1
+> borrow Finny Annabelle 61.24
+> borrow Carlos Annabelle 26.7
+> repay Finny Carlos 171.54
+> borrow Diana Finny 91.5
+> repay Carlos Billibob 135.15
+> repay Annabelle Finny 183.39
+> repay Finny Annabelle 78.63
+> borrow Diana Billibob 29.48
+> borrow Diana Finny 156.94
+> repay Elon Carlos 30.2
+> borrow Billibob Elon 125.80
+> repay Billibob Elon 79.12
+> repay Carlos Billibob 4.45
+> borrow Carlos Elon 194.28
+> borrow Elon Finny 30.31
+> repay Diana Billibob 70.78
+> repay Diana Billibob 145.53
+> borrow Diana Finny 99.62
+> repay Carlos Diana 43.81
+> borrow Billibob Diana 67.34
+> repay Finny Billibob 132.27
+ > repay Carlos Annabelle 162.77
+> borrow Annabelle Finny 19.94
+> borrow Finny Annabelle 90.29
+> borrow Billibob Elon 128.93
+ > borrow Annabelle Finny 175.46
+> repay Diana Finny 179.94
+> repay Carlos Finny 5.95
+> borrow Finny Carlos 170.43
+> repay Billibob Diana 76.75
+> borrow Carlos Diana 114.49
+> borrow Carlos Finny 59.25
+> repay Billibob Diana 22.92
+> repay Annabelle Elon 176.75
+> repay Annabelle Diana 43.8
 > balance close
-Annabelle owes Elon 108
-Finny owes Annabelle 254
-Carlos owes Annabelle 280
-Billibob owes Annabelle 28
-Billibob owes Carlos 75
-Elon owes Billibob 121
-Diana owes Carlos 273
-Carlos owes Finny 172
-Billibob owes Diana 212
-Annabelle owes Diana 498
-Elon owes Diana 281
-Elon owes Carlos 123
-Elon owes Finny 5
-Diana owes Finny 666
-Finny owes Billibob 86
-> exit
+Billibob owes Annabelle 46.13
+Annabelle owes Carlos 137.09
+Diana owes Annabelle 4.05
+Finny owes Annabelle 587.86
+Elon owes Billibob 67.93
+Billibob owes Finny 46.42
+Billibob owes Carlos 297.17
+Finny owes Carlos 142.00
+Billibob owes Diana 529.12
+Carlos owes Diana 467.37
+Diana owes Elon 108.48
+Elon owes Annabelle 56.78
+Carlos owes Elon 295.21
+Finny owes Elon 2.44
+Finny owes Diana 9.60
+[1;31m
+Start test 8[0m
+> group create lowerCaseText
+Illegal command arguments
+> group show NOTFOUNDGROUP
+Unknown group
+'> group create BOYS (Elon, Bob, Chuck)
+> group show BOYS
+Bob
+Chuck
+Elon
+[1;31m
+Start test 9[0m
+%> group create COFFEETEAM (Ann, Bob)
+&> purchase Bob coffee 10 (COFFEETEAM)
+5.0
+5.0
+> balance close
+Ann owes Bob 5.00
+> repay Ann Bob 5.00
+> balance close
+No repayments
+[1;31m
+Start test 10[0m
+)> group create FRIENDS (Ann, Bob, Chuck)
+*> purchase Elon chocolate 12.50 (FRIENDS)
+4.166666666666667
+4.17
+4.17
+4.16
+> balance close
+Ann owes Elon 4.17
+Bob owes Elon 4.17
+Chuck owes Elon 4.16
+[1;31m
+Start test 11[0m
+'> group create BOYS (Elon, Bob, Chuck)
+"> group create GIRLS (Ann, Diana)
+1> 2020.10.20 purchase Diana flowers 15.65 (BOYS)
+5.216666666666667
+5.22
+5.22
+5.210000000000001
+2> 2020.10.21 purchase Chuck chocolate 6.30 (BOYS)
+2.1
+2.1
+2.0999999999999996
+0> 2020.10.22 purchase Bob icecream 3.99 (GIRLS)
+1.995
+2.0
+1.9900000000000002
+> balance close
+Ann owes Bob 2.00
+Bob owes Chuck 2.10
+Bob owes Diana 3.23
+Chuck owes Diana 5.22
+Elon owes Chuck 2.10
+Elon owes Diana 5.21

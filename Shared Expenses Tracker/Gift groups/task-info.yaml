@@ -1,16 +1,5 @@
 type: edu
 files:
-- name: src/splitter/Main.java
-  visible: true
-  text: |
-    package splitter;
-
-    public class Main {
-        public static void main(String[] args) {
-            System.out.println("Hello World");
-        }
-    }
-  learner_created: false
 - name: test/SharedBillsSplitterTestStage2.java
   visible: false
   text: |
@@ -409,6 +398,61 @@ files:
         }
     }
   learner_created: false
+- name: src/splitter/Transaction.java
+  visible: true
+  text: |
+    package splitter;
+
+    import lombok.AllArgsConstructor;
+    import lombok.Data;
+
+    import java.time.LocalDate;
+
+    @Data
+    @AllArgsConstructor
+    public class Transaction {
+        private LocalDate date;
+        private String acc_debit;
+        private String acc_credit;
+        private Integer sum;
+
+        static boolean isValidOperation(String[] cmdList, String command) {
+            if (cmdList.length < 4
+                    || (cmdList.length == 4 && !cmdList[0].equals(command))
+                    || (cmdList.length == 5 && !cmdList[1].equals(command))) {
+                return false;
+            }
+            return true;
+        }
+
+
+        static boolean isValidBalance(String[] cmdList) {
+            if ((cmdList.length == 1 && !cmdList[0].equals("balance"))
+                    || (cmdList.length == 2 && !(cmdList[0].equals("balance") || cmdList[1].equals("balance")))
+                    || (cmdList.length == 3 && (!cmdList[1].equals("balance") || !cmdList[2].matches("open|close")))) {
+                return false;
+            }
+            return true;
+        }
+    }
+  learner_created: true
+- name: src/splitter/Group.java
+  visible: true
+  learner_created: true
+- name: src/splitter/Main.java
+  visible: true
+  text: |
+    package splitter;
+
+    public class Main {
+        public static void main(String[] args) {
+            System.out.println("Hello World");
+        }
+    }
+  learner_created: false
 feedback_link: https://hyperskill.org/learn/step/11719#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 10 Oct 2023 20:05:50 UTC"
 record: -1

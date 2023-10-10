@@ -11,12 +11,13 @@ public class Transaction {
     private LocalDate date;
     private String acc_debit;
     private String acc_credit;
-    private Integer sum;
+    private Double sum;
 
     static boolean isValidOperation(String[] cmdList, String command) {
         if (cmdList.length < 4
                 || (cmdList.length == 4 && !cmdList[0].equals(command))
-                || (cmdList.length == 5 && !cmdList[1].equals(command))) {
+                || (cmdList.length == 5 && !(cmdList[1].equals(command) || cmdList[0].equals(command)))
+                || (cmdList.length == 6 && !cmdList[1].equals(command))) {
             return false;
         }
         return true;
