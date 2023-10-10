@@ -14,22 +14,16 @@ public class Transaction {
     private Double sum;
 
     static boolean isValidOperation(String[] cmdList, String command) {
-        if (cmdList.length < 4
-                || (cmdList.length == 4 && !cmdList[0].equals(command))
-                || (cmdList.length == 5 && !(cmdList[1].equals(command) || cmdList[0].equals(command)))
-                || (cmdList.length == 6 && !cmdList[1].equals(command))) {
-            return false;
-        }
-        return true;
+        return cmdList.length >= 4
+                && (cmdList.length != 4 || cmdList[0].equals(command))
+                && (cmdList.length != 5 || (cmdList[1].equals(command) || cmdList[0].equals(command)))
+                && (cmdList.length != 6 || cmdList[1].equals(command));
     }
 
 
     static boolean isValidBalance(String[] cmdList) {
-        if ((cmdList.length == 1 && !cmdList[0].equals("balance"))
-                || (cmdList.length == 2 && !(cmdList[0].equals("balance") || cmdList[1].equals("balance")))
-                || (cmdList.length == 3 && (!cmdList[1].equals("balance") || !cmdList[2].matches("open|close")))) {
-            return false;
-        }
-        return true;
+        return (cmdList.length != 1 || cmdList[0].equals("balance"))
+                && (cmdList.length != 2 || (cmdList[0].equals("balance") || cmdList[1].equals("balance")))
+                && (cmdList.length != 3 || (cmdList[1].equals("balance") && cmdList[2].matches("open|close")));
     }
 }

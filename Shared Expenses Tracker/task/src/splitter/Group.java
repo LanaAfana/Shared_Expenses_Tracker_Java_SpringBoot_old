@@ -14,10 +14,7 @@ public class Group {
     private List<String> participants;
 
     public static boolean isAGroup(String name) {
-        if (name.matches("^[A-Z]+$")) {
-            return true;
-        }
-        return false;
+        return name.matches("^[A-Z]+$");
     }
 
     public static boolean isValidOperation(String cmdStr, String cmd) {
@@ -31,10 +28,8 @@ public class Group {
             ) {
                 return true;
             }
-            if (cmd.equals("show")
-                    && cmdList.length == 3) {
-                return true;
-            }
+            return cmd.equals("show")
+                    && cmdList.length == 3;
         }
         return false;
     }

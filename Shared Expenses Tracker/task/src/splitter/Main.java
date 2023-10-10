@@ -6,9 +6,9 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
-    static List<Transaction> transactions = new ArrayList();
-    static List<Group> groups = new ArrayList();
-    static List<Transaction> result = new ArrayList();
+    static List<Transaction> transactions = new ArrayList<>();
+    static List<Group> groups = new ArrayList<>();
+    static List<Transaction> result = new ArrayList<>();
 
     public static void main(String[] args) {
 
@@ -16,13 +16,14 @@ public class Main {
             try (Scanner scanner = new Scanner(System.in)) {
                 String cmd = scanner.nextLine().trim();
                 if (cmd.equals("help")) {
-                    System.out.println("balance\n" +
-                            "borrow\n" +
-                            "exit\n" +
-                            "group\n" +
-                            "help\n" +
-                            "purchase\n" +
-                            "repay");
+                    System.out.println("""
+                            balance
+                            borrow
+                            exit
+                            group
+                            help
+                            purchase
+                            repay""");
                     continue;
                 }
                 if (cmd.equals("exit")) {
@@ -110,8 +111,7 @@ public class Main {
         if (Group.isValidOperation(cmdStr, "show")) {
             String name = cmdStr.split("\\s+")[2];
             if (groups.stream()
-                    .filter(x -> x.getName().equals(name))
-                    .findFirst().isPresent()) {
+                    .anyMatch(x -> x.getName().equals(name))) {
                 groups.stream()
                         .filter(x -> x.getName().equals(name))
                         .findFirst()
@@ -150,8 +150,7 @@ public class Main {
             LocalDate date = cmdList[0].matches("borrow|repay") ?
                     LocalDate.now() :
                     LocalDate.parse(cmdList[0].replace('.', '-'));
-            double mult = cmd.equals("borrow") ? 1.00 : -1.00;
-            Double sum = Double.parseDouble(cmdList[shift + 3]);
+            double sum = Double.parseDouble(cmdList[shift + 3]);
             sum = cmd.equals("borrow")
                     ? sum
                     : new BigDecimal(-1.00 * sum)
@@ -206,7 +205,7 @@ public class Main {
                         }
                 } while (iterator.hasNext());
 
-                if (isExistsRecord == false) {
+                if (!isExistsRecord) {
                     iterator.add(new Transaction(trsc.getDate(), trsc.getAcc_debit(), trsc.getAcc_credit(), trsc.getSum()));
                 }
             }
@@ -219,11 +218,11 @@ public class Main {
     private static void outputBalance() {
         boolean hasRepayments = false;
         List<Transaction> resList = result.stream()
-                .sorted(Comparator.comparing(x -> x.getAcc_credit()))
-                .sorted(Comparator.comparing(x -> x.getAcc_debit()))
+                .sorted(Comparator.comparing(Transaction::getAcc_credit))
+                .sorted(Comparator.comparing(Transaction::getAcc_debit))
                 .toList();
         for (Transaction rec : resList) {
-            Double sum = new BigDecimal(rec.getSum())
+            double sum = new BigDecimal(rec.getSum())
                     .setScale(2, RoundingMode.HALF_UP)
                     .doubleValue();
             if (sum > 0.00) {

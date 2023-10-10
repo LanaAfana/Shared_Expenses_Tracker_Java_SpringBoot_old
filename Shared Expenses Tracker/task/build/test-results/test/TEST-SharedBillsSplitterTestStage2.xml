@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SharedBillsSplitterTestStage2" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-10T20:05:50" hostname="MacBook-Pro-3.local" time="0.358">
+<testsuite name="SharedBillsSplitterTestStage2" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-10T20:12:51" hostname="MacBook-Pro-3.local" time="0.324">
   <properties/>
-  <testcase name="start" classname="SharedBillsSplitterTestStage2" time="0.358"/>
+  <testcase name="start" classname="SharedBillsSplitterTestStage2" time="0.324"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 > someRandomText
@@ -61,110 +61,112 @@ Elon owes Diana 12.00
 > exit
 ?[1;31m
 Start test 7?[0m
-> repay Elon Annabelle 92.98
-> repay Carlos Finny 196.41
-> borrow Diana Elon 164.43
-> repay Annabelle Finny 162.71
-> borrow Finny Annabelle 178.23
-> repay Elon Carlos 61.19
-> borrow Annabelle Diana 198.61
-> repay Billibob Finny 184.63
-> borrow Finny Diana 96.0
-> repay Diana Carlos 9.0
-> borrow Diana Annabelle 18.45
-> borrow Annabelle Carlos 87.43
-> repay Elon Carlos 5.21
-> repay Carlos Billibob 37.20
-> repay Carlos Billibob 38.44
-> borrow Billibob Finny 98.78
-> repay Annabelle Diana 58.0
-> borrow Diana Annabelle 5.84
-> repay Diana Annabelle 102.77
-> borrow Annabelle Carlos 15.58
-> repay Annabelle Finny 190.65
-> repay Carlos Elon 37.15
-> repay Billibob Elon 122.94
-> repay Diana Billibob 174.6
-> repay Annabelle Finny 36.69
-> borrow Carlos Diana 158.34
-> borrow Diana Finny 196.89
-> borrow Annabelle Carlos 3.87
-> borrow Carlos Diana 148.15
-> repay Annabelle Carlos 105.86
-> repay Elon Billibob 56.32
-> repay Diana Carlos 81.20
-> borrow Finny Diana 192.40
-> repay Carlos Billibob 81.93
-> repay Diana Finny 59.61
-> borrow Annabelle Finny 71.41
-> borrow Diana Annabelle 179.34
-> borrow Elon Finny 52.82
-> repay Billibob Elon 87.97
-> repay Elon Annabelle 175.25
-> repay Diana Billibob 177.24
-> repay Elon Finny 88.94
-> repay Annabelle Billibob 138.6
-> borrow Carlos Elon 10.75
-> repay Billibob Annabelle 92.47
-> borrow Carlos Elon 30.73
-> repay Diana Elon 55.95
-> repay Billibob Elon 88.95
-> borrow Billibob Diana 22.78
-> repay Diana Finny 26.60
-> repay Annabelle Elon 148.26
-> repay Finny Elon 3.37
-> repay Annabelle Finny 30.1
-> borrow Finny Annabelle 61.24
-> borrow Carlos Annabelle 26.7
-> repay Finny Carlos 171.54
-> borrow Diana Finny 91.5
-> repay Carlos Billibob 135.15
-> repay Annabelle Finny 183.39
-> repay Finny Annabelle 78.63
-> borrow Diana Billibob 29.48
-> borrow Diana Finny 156.94
-> repay Elon Carlos 30.2
-> borrow Billibob Elon 125.80
-> repay Billibob Elon 79.12
-> repay Carlos Billibob 4.45
-> borrow Carlos Elon 194.28
-> borrow Elon Finny 30.31
-> repay Diana Billibob 70.78
-> repay Diana Billibob 145.53
-> borrow Diana Finny 99.62
-> repay Carlos Diana 43.81
-> borrow Billibob Diana 67.34
-> repay Finny Billibob 132.27
-> repay Carlos Annabelle 162.77
-> borrow Annabelle Finny 19.94
-> borrow Finny Annabelle 90.29
-> borrow Billibob Elon 128.93
-> borrow Annabelle Finny 175.46
-> repay Diana Finny 179.94
-> repay Carlos Finny 5.95
-> borrow Finny Carlos 170.43
-> repay Billibob Diana 76.75
-> borrow Carlos Diana 114.49
-> borrow Carlos Finny 59.25
-> repay Billibob Diana 22.92
-> repay Annabelle Elon 176.75
-> repay Annabelle Diana 43.8
+> borrow Finny Carlos 75.52
+> repay Finny Diana 197.9
+> repay Carlos Elon 115.51
+> borrow Elon Diana 16.63
+> repay Elon Carlos 51.69
+> borrow Elon Billibob 135.43
+> repay Annabelle Carlos 12.24
+> borrow Diana Annabelle 179.53
+> borrow Elon Carlos 103.17
+> borrow Diana Finny 14.38
+> borrow Diana Annabelle 83.50
+> repay Elon Annabelle 88.49
+> repay Annabelle Elon 140.55
+> borrow Diana Billibob 33.8
+> repay Carlos Finny 86.55
+> repay Annabelle Carlos 74.50
+> repay Diana Finny 99.68
+> borrow Annabelle Billibob 10.13
+> borrow Finny Carlos 174.18
+> repay Finny Diana 4.33
+> borrow Elon Annabelle 108.88
+> repay Annabelle Elon 5.12
+> repay Annabelle Elon 106.11
+> borrow Carlos Finny 45.32
+> repay Finny Annabelle 142.75
+> repay Finny Carlos 113.32
+> borrow Finny Billibob 113.61
+> repay Finny Carlos 127.96
+> borrow Diana Billibob 91.60
+> borrow Elon Billibob 126.68
+> borrow Annabelle Billibob 108.24
+> repay Diana Annabelle 184.23
+> borrow Carlos Billibob 57.39
+> borrow Annabelle Elon 177.72
+> borrow Elon Billibob 35.8
+> borrow Elon Annabelle 15.68
+> repay Diana Elon 141.10
+> borrow Elon Finny 48.29
+> repay Billibob Finny 145.15
+> repay Finny Diana 97.28
+> repay Finny Billibob 29.66
+> repay Elon Finny 169.63
+> borrow Annabelle Carlos 198.68
+> borrow Diana Finny 174.25
+> borrow Finny Diana 186.93
+> borrow Carlos Elon 79.35
+> repay Elon Annabelle 179.76
+> borrow Annabelle Diana 119.21
+> repay Billibob Elon 188.12
+> repay Annabelle Elon 131.72
+> repay Annabelle Billibob 140.14
+> borrow Elon Annabelle 47.97
+> borrow Billibob Diana 74.45
+> borrow Diana Finny 116.70
+> borrow Finny Carlos 189.21
+> repay Diana Elon 140.3
+> borrow Elon Diana 22.74
+> repay Finny Billibob 191.64
+> repay Elon Diana 24.74
+> repay Annabelle Diana 26.66
+> borrow Billibob Finny 108.85
+> borrow Billibob Diana 21.30
+> repay Carlos Annabelle 130.68
+> borrow Finny Diana 62.77
+> borrow Carlos Finny 168.3
+> repay Finny Billibob 194.52
+> repay Elon Billibob 89.29
+> borrow Finny Annabelle 170.62
+> repay Carlos Elon 117.82
+> repay Carlos Diana 42.66
+> borrow Billibob Finny 170.91
+> borrow Carlos Diana 62.20
+> borrow Finny Billibob 0.0
+> borrow Annabelle Elon 195.50
+> repay Carlos Diana 133.52
+> repay Diana Annabelle 2.57
+> repay Finny Diana 71.59
+> borrow Billibob Diana 41.10
+> borrow Annabelle Finny 56.58
+> repay Finny Elon 121.90
+> repay Billibob Finny 187.4
+> repay Diana Annabelle 144.58
+> borrow Finny Billibob 140.11
+> repay Carlos Billibob 161.81
+> borrow Annabelle Finny 63.20
+> borrow Annabelle Finny 66.93
+> repay Billibob Elon 87.8
+> borrow Annabelle Finny 176.75
+> borrow Elon Diana 67.92
+> borrow Billibob Finny 185.47
 > balance close
-Billibob owes Annabelle 46.13
-Annabelle owes Carlos 137.09
-Diana owes Annabelle 4.05
-Finny owes Annabelle 587.86
-Elon owes Billibob 67.93
-Billibob owes Finny 46.42
-Billibob owes Carlos 297.17
-Finny owes Carlos 142.00
-Billibob owes Diana 529.12
-Carlos owes Diana 467.37
-Diana owes Elon 108.48
-Elon owes Annabelle 56.78
-Carlos owes Elon 295.21
-Finny owes Elon 2.44
-Finny owes Diana 9.60
+Billibob owes Annabelle 21.77
+Annabelle owes Carlos 242.62
+Billibob owes Carlos 104.42
+Diana owes Carlos 113.98
+Elon owes Carlos 205.46
+Annabelle owes Diana 160.90
+Billibob owes Diana 11.45
+Annabelle owes Elon 85.44
+Elon owes Billibob 484.54
+Elon owes Diana 363.95
+Elon owes Finny 0.56
+Annabelle owes Finny 335.59
+Billibob owes Finny 294.78
+Finny owes Carlos 70.56
+Diana owes Finny 327.05
 ?[1;31m
 Start test 8?[0m
 > group create lowerCaseText
