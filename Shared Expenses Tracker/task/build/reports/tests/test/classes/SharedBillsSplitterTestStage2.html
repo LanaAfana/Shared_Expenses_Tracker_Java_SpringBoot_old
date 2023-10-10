@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class SharedBillsSplitterTestStage2</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class SharedBillsSplitterTestStage2</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; SharedBillsSplitterTestStage2</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.358s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">start</td>
+<td class="success">0.358s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>?[1;31m
+Start test 1?[0m
+&gt; someRandomText
+Unknown command. Print help to show commands list
+&gt; exit
+?[1;31m
+Start test 2?[0m
+&gt; repay Ann
+Illegal command arguments
+&gt; exit
+?[1;31m
+Start test 3?[0m
+&gt; help
+balance
+borrow
+exit
+group
+help
+purchase
+repay
+&gt; exit
+?[1;31m
+Start test 4?[0m
+&gt; exit
+?[1;31m
+Start test 5?[0m
+&gt; 2020.09.30 borrow Ann Bob 20.10
+&gt; 2020.10.01 repay Ann Bob 10.22
+&gt; 2020.10.10 borrow Bob Ann 7.35
+&gt; 2020.10.15 repay Ann Bob 8.99
+&gt; repay Bob Ann 6.46
+&gt; 2020.09.25 balance
+No repayments
+&gt; 2020.10.30 balance open
+Ann owes Bob 20.10
+&gt; 2020.10.20 balance close
+Bob owes Ann 6.46
+&gt; balance close
+No repayments
+&gt; exit
+?[1;31m
+Start test 6?[0m
+&gt; borrow Ann Bob 25
+&gt; repay Ann Bob 15
+&gt; repay Bob Chuck 7
+&gt; borrow Ann Bob 4
+&gt; repay Bob Diana 5
+&gt; borrow Elon Diana 12
+&gt; repay Chuck Diana 14
+&gt; repay Chuck Diana 12
+&gt; balance close
+Ann owes Bob 14.00
+Chuck owes Bob 7.00
+Diana owes Bob 5.00
+Diana owes Chuck 26.00
+Elon owes Diana 12.00
+&gt; exit
+?[1;31m
+Start test 7?[0m
+&gt; repay Elon Annabelle 92.98
+&gt; repay Carlos Finny 196.41
+&gt; borrow Diana Elon 164.43
+&gt; repay Annabelle Finny 162.71
+&gt; borrow Finny Annabelle 178.23
+&gt; repay Elon Carlos 61.19
+&gt; borrow Annabelle Diana 198.61
+&gt; repay Billibob Finny 184.63
+&gt; borrow Finny Diana 96.0
+&gt; repay Diana Carlos 9.0
+&gt; borrow Diana Annabelle 18.45
+&gt; borrow Annabelle Carlos 87.43
+&gt; repay Elon Carlos 5.21
+&gt; repay Carlos Billibob 37.20
+&gt; repay Carlos Billibob 38.44
+&gt; borrow Billibob Finny 98.78
+&gt; repay Annabelle Diana 58.0
+&gt; borrow Diana Annabelle 5.84
+&gt; repay Diana Annabelle 102.77
+&gt; borrow Annabelle Carlos 15.58
+&gt; repay Annabelle Finny 190.65
+&gt; repay Carlos Elon 37.15
+&gt; repay Billibob Elon 122.94
+&gt; repay Diana Billibob 174.6
+&gt; repay Annabelle Finny 36.69
+&gt; borrow Carlos Diana 158.34
+&gt; borrow Diana Finny 196.89
+&gt; borrow Annabelle Carlos 3.87
+&gt; borrow Carlos Diana 148.15
+&gt; repay Annabelle Carlos 105.86
+&gt; repay Elon Billibob 56.32
+&gt; repay Diana Carlos 81.20
+&gt; borrow Finny Diana 192.40
+&gt; repay Carlos Billibob 81.93
+&gt; repay Diana Finny 59.61
+&gt; borrow Annabelle Finny 71.41
+&gt; borrow Diana Annabelle 179.34
+&gt; borrow Elon Finny 52.82
+&gt; repay Billibob Elon 87.97
+&gt; repay Elon Annabelle 175.25
+&gt; repay Diana Billibob 177.24
+&gt; repay Elon Finny 88.94
+&gt; repay Annabelle Billibob 138.6
+&gt; borrow Carlos Elon 10.75
+&gt; repay Billibob Annabelle 92.47
+&gt; borrow Carlos Elon 30.73
+&gt; repay Diana Elon 55.95
+&gt; repay Billibob Elon 88.95
+&gt; borrow Billibob Diana 22.78
+&gt; repay Diana Finny 26.60
+&gt; repay Annabelle Elon 148.26
+&gt; repay Finny Elon 3.37
+&gt; repay Annabelle Finny 30.1
+&gt; borrow Finny Annabelle 61.24
+&gt; borrow Carlos Annabelle 26.7
+&gt; repay Finny Carlos 171.54
+&gt; borrow Diana Finny 91.5
+&gt; repay Carlos Billibob 135.15
+&gt; repay Annabelle Finny 183.39
+&gt; repay Finny Annabelle 78.63
+&gt; borrow Diana Billibob 29.48
+&gt; borrow Diana Finny 156.94
+&gt; repay Elon Carlos 30.2
+&gt; borrow Billibob Elon 125.80
+&gt; repay Billibob Elon 79.12
+&gt; repay Carlos Billibob 4.45
+&gt; borrow Carlos Elon 194.28
+&gt; borrow Elon Finny 30.31
+&gt; repay Diana Billibob 70.78
+&gt; repay Diana Billibob 145.53
+&gt; borrow Diana Finny 99.62
+&gt; repay Carlos Diana 43.81
+&gt; borrow Billibob Diana 67.34
+&gt; repay Finny Billibob 132.27
+&gt; repay Carlos Annabelle 162.77
+&gt; borrow Annabelle Finny 19.94
+&gt; borrow Finny Annabelle 90.29
+&gt; borrow Billibob Elon 128.93
+&gt; borrow Annabelle Finny 175.46
+&gt; repay Diana Finny 179.94
+&gt; repay Carlos Finny 5.95
+&gt; borrow Finny Carlos 170.43
+&gt; repay Billibob Diana 76.75
+&gt; borrow Carlos Diana 114.49
+&gt; borrow Carlos Finny 59.25
+&gt; repay Billibob Diana 22.92
+&gt; repay Annabelle Elon 176.75
+&gt; repay Annabelle Diana 43.8
+&gt; balance close
+Billibob owes Annabelle 46.13
+Annabelle owes Carlos 137.09
+Diana owes Annabelle 4.05
+Finny owes Annabelle 587.86
+Elon owes Billibob 67.93
+Billibob owes Finny 46.42
+Billibob owes Carlos 297.17
+Finny owes Carlos 142.00
+Billibob owes Diana 529.12
+Carlos owes Diana 467.37
+Diana owes Elon 108.48
+Elon owes Annabelle 56.78
+Carlos owes Elon 295.21
+Finny owes Elon 2.44
+Finny owes Diana 9.60
+?[1;31m
+Start test 8?[0m
+&gt; group create lowerCaseText
+Illegal command arguments
+&gt; group show NOTFOUNDGROUP
+Unknown group
+&gt; group create BOYS (Elon, Bob, Chuck)
+&gt; group show BOYS
+Bob
+Chuck
+Elon
+?[1;31m
+Start test 9?[0m
+&gt; group create COFFEETEAM (Ann, Bob)
+&gt; purchase Bob coffee 10 (COFFEETEAM)
+5.0
+5.0
+&gt; balance close
+Ann owes Bob 5.00
+&gt; repay Ann Bob 5.00
+&gt; balance close
+No repayments
+?[1;31m
+Start test 10?[0m
+&gt; group create FRIENDS (Ann, Bob, Chuck)
+&gt; purchase Elon chocolate 12.50 (FRIENDS)
+4.166666666666667
+4.17
+4.17
+4.16
+&gt; balance close
+Ann owes Elon 4.17
+Bob owes Elon 4.17
+Chuck owes Elon 4.16
+?[1;31m
+Start test 11?[0m
+&gt; group create BOYS (Elon, Bob, Chuck)
+&gt; group create GIRLS (Ann, Diana)
+&gt; 2020.10.20 purchase Diana flowers 15.65 (BOYS)
+5.216666666666667
+5.22
+5.22
+5.210000000000001
+&gt; 2020.10.21 purchase Chuck chocolate 6.30 (BOYS)
+2.1
+2.1
+2.0999999999999996
+&gt; 2020.10.22 purchase Bob icecream 3.99 (GIRLS)
+1.995
+2.0
+1.9900000000000002
+&gt; balance close
+Ann owes Bob 2.00
+Bob owes Chuck 2.10
+Bob owes Diana 3.23
+Chuck owes Diana 5.22
+Elon owes Chuck 2.10
+Elon owes Diana 5.21
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at 10 окт. 2023 г., 23:05:50</p>
+</div>
+</div>
+</body>
+</html>
